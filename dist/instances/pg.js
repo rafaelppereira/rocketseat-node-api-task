@@ -9,5 +9,6 @@ const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 exports.sequelize = new sequelize_1.Sequelize(process.env.PG_DB, process.env.PG_USER, process.env.PG_PASSWORD, {
     dialect: 'postgres',
+    host: process.env.PG_HOST,
     port: parseInt(process.env.PG_PORT)
 });
